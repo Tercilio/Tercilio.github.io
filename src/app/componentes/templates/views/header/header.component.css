@@ -1,0 +1,18 @@
+.img {
+    width: 75px;
+    height: 55px;
+    margin-top: .2rem;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a7988;
+    color: white;
+}

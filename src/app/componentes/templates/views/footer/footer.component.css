@@ -1,0 +1,32 @@
+.footer {
+    background-color: #0a7988;
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+}
+
+.img2 {
+    margin-left: 20rem;
+    height: 60%;
+    margin-right: .5rem;
+    text-align: right;
+    align-items: center;
+    margin-left: 78%;
+}
+
+p {
+    margin-top: .5rem;
+    margin-left: 70rem;
+}
+
+.img {
+    width: 45%;
+    margin-top: .3rem;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1 {
+    margin-left: 65rem;
+}

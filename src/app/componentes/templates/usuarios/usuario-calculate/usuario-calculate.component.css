@@ -1,0 +1,21 @@
+.p {
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 2rem;
+}
+
+.user {
+    align-items: center;
+    margin-left: 42%;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}

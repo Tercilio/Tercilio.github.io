@@ -1,0 +1,44 @@
+<form class="form mat-elevation-z8 container">
+    <mat-form-field class="full-width">
+        <mat-label>Nome</mat-label>
+        <input [(ngModel)]="usuario.nome" [formControl]="nome" required name="nome" maxlength="50" matInput placeholder="Ex. Tercílio Aires">
+        <mat-error *ngIf="nome.invalid"> {{errorValidNome()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Salario</mat-label>
+        <input [(ngModel)]="usuario.salario" [formControl]="salario" required name="salário" matInput placeholder="Ex. 4500">
+        <mat-error *ngIf="salario.invalid"> {{errorValidSalario()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Reajuste Anual</mat-label>
+        <input [(ngModel)]="usuario.reajusteAnual" [formControl]="reajuste" required name="reajuste" matInput placeholder="Ex. 2">
+        <mat-error *ngIf="reajuste.invalid"> {{errorValidReajuste()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Contribuição 1</mat-label>
+        <input [(ngModel)]="usuario.contX" [formControl]="contribuicaoX" required name="contribuicaoX" matInput placeholder="OBS: de 1 até 4% do valor do seu salário." type="number" min="1" max="4">
+        <mat-error *ngIf="contribuicaoX.invalid"> {{errorValidContribuicaoX()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label> Contribuicao 2 </mat-label>
+        <input [(ngModel)]="usuario.contY" [formControl]="contribuicaoY" required name="contribuicaoY" matInput placeholder="OBS: de 0 até 8% do valor do seu salário" type="number" min="0" max="8">
+        <mat-error *ngIf="contribuicaoY.invalid"> {{errorValidContribuicaoY()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Anos</mat-label>
+        <input [(ngModel)]="usuario.anos" [formControl]="qtd_Anos" required name="qtd_Anos" matInput placeholder="No mínimo 2 e no máximo 35 Anos " type="number" min="2" max="35">
+        <mat-error *ngIf="qtd_Anos.invalid"> {{errorValidqtd_Anos()}} </mat-error>
+    </mat-form-field>
+    <button class="mat-elevation-z8" (click)="create()" [disabled]="errorValidNome() || errorValidSalario() || errorValidReajuste() || errorValidContribuicaoX() || errorValidContribuicaoY() || errorValidqtd_Anos()" mat-raised-button color="accent">
+    CONCLUIR</button>
+
+    <button class="mat-elevation-z8" (click)="cancel()" mat-raised-button color="warn">
+         <a class="material-icons">cancel</a>CANCELAR
+    </button>
+
+</form>

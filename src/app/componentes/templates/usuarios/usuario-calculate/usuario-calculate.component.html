@@ -1,0 +1,38 @@
+<div class="mat-elevation-z8 container">
+
+    <table mat-table [dataSource]="userDTO">
+        <!-- Position Column -->
+        <ng-container matColumnDef="ano">
+            <th mat-header-cell *matHeaderCellDef> ANOS </th>
+            <td mat-cell *matCellDef="let element">{{ element.ano }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="salario">
+            <th mat-header-cell *matHeaderCellDef> Salário Reajustado </th>
+            <td mat-cell *matCellDef="let element">R$ {{ element.salario | number: '1.0-2' }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="contX">
+            <th mat-header-cell *matHeaderCellDef> Cont "X" </th>
+            <td mat-cell *matCellDef="let element">R$ {{ element.contX | number: '1.0-2' }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="contY">
+            <th mat-header-cell *matHeaderCellDef> Cont "Y" </th>
+            <td mat-cell *matCellDef="let element">R$ {{ element.contY | number: '1.0-2' }}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="total">
+            <th mat-header-cell *matHeaderCellDef> TOTAL </th>
+            <td mat-cell *matCellDef="let element">R$ {{ element.total | number: '1.0-2'}}</td>
+        </ng-container>
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[1, 5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

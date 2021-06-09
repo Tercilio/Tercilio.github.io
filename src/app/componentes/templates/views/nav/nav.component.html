@@ -1,0 +1,26 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">home</i>Tela Inicial
+            </a>
+
+            <!--  <a mat-list-item routerLink="usuarios">
+                <i class="material-icons">person_pin</i>USUÁRIOS
+            </a>-->
+
+            <a mat-list-item routerLink="usuarios/create">
+                <i class="material-icons">monetization_on</i>SIMULE AGORA
+            </a>
+
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button type="button" mat-raised-button color="accent" (click)="drawer.toggle()">
+            Clique Aqui Para Iniciar sua simulação!
+    </button>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>
